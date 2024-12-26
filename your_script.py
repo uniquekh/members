@@ -2,8 +2,8 @@ import time
 from pyrogram import Client, errors
 
 # Replace these with your own API details
-api_id = 24271143  # Get this from https://my.telegram.org
-api_hash = "27be842cb506de9b5520146dfd0ba299"
+api_id = 21179966  # Get this from https://my.telegram.org
+api_hash = "d97919fb0a3c725e8bb2a25bbb37d57c"
 
 # Replace with your channel username
 channel_username = "texttff"  # Example: "mychannel"
