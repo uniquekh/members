@@ -11,16 +11,19 @@ mpy_config.IMAGEMAGICK_BINARY = r"/usr/bin/convert"  # Adjust if using a differe
 # Create Shayari video with random background
 def create_shayari_video(shayari_lines, output_path):
     # Parameters
-    video_duration = 10  # in seconds 
+    video_duration = 06  # in seconds 
 
     # Combine all Shayari lines into one string
     shayari_text = "\n".join(shayari_lines)
 
     # List of background images to randomly select from
     background_images = [
-        "images/bg1.jpg",  # Relative path to images in your project folder
-        "images/bg2.jpg",
-        "images/bg3.jpg"
+        "images/yousef-alfuhigi-yuuAGGXfe54-unsplash.jpg",  # Relative path to images in your project folder
+        "images/nathan-dumlao-ciO5L8pin8A-unsplash.jpg",
+        "images/henry-be-TCsCykbwSJw-unsplash.jpg"
+        "images/Untitled design (1).jpg"
+        "images/charlesdeluvio-pcZvxrAyYoQ-unsplash.jpg"
+        "images/daoud-abismail-WU6rVJkXck8-unsplash.jpg"
     ]
     
     # Select a random background image
