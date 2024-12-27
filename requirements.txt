@@ -1,1 +1,3 @@
-pyrogram==2.0.0
+moviepy
+instagrapi
+python-dotenv
