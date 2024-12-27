@@ -20,9 +20,9 @@ def create_shayari_video(shayari_lines, output_path):
     background_images = [
         "images/yousef-alfuhigi-yuuAGGXfe54-unsplash.jpg",  # Relative path to images in your project folder
         "images/nathan-dumlao-ciO5L8pin8A-unsplash.jpg",
-        "images/henry-be-TCsCykbwSJw-unsplash.jpg"
-        "images/Untitled design (1).jpg"
-        "images/charlesdeluvio-pcZvxrAyYoQ-unsplash.jpg"
+        "images/henry-be-TCsCykbwSJw-unsplash.jpg",
+        "images/Untitled design (1).jpg",
+        "images/charlesdeluvio-pcZvxrAyYoQ-unsplash.jpg",
         "images/daoud-abismail-WU6rVJkXck8-unsplash.jpg"
     ]
     
@@ -62,9 +62,10 @@ def upload_to_instagram(video_path):
 
     # Choose a random audio from a predefined list
     audio_files = [
-        "audio/audio1.mp3",  # Relative path to audio in your project folder
-        "audio/audio2.mp3",
-        "audio/audio3.mp3"
+        "audio/1j.mp3",  # Relative path to audio in your project folder
+        "audio/2j.mp3",
+        "audio/3j.mp3",
+        "audio/4j.mp3"
     ]
     selected_audio = random.choice(audio_files)
 
