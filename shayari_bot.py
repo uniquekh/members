@@ -6,20 +6,21 @@ from instagrapi import Client
 import moviepy.config as mpy_config
 
 # Set the path for ImageMagick
-mpy_config.IMAGEMAGICK_BINARY = r"/usr/bin/convert"
+mpy_config.IMAGEMAGICK_BINARY = r"/usr/bin/convert"  # Adjust if using a different path for convert on Linux
 
+# Create Shayari video with random background
 def create_shayari_video(shayari_lines, output_path):
     # Parameters
-    video_duration = 10   # in seconds 
+    video_duration = 10  # in seconds 
 
     # Combine all Shayari lines into one string
     shayari_text = "\n".join(shayari_lines)
 
     # List of background images to randomly select from
     background_images = [
-        r"C:\\path_to_your_image\\bg1.jpg",
-        r"C:\\path_to_your_image\\bg2.jpg",
-        r"C:\\path_to_your_image\\bg3.jpg"
+        "images/bg1.jpg",  # Relative path to images in your project folder
+        "images/bg2.jpg",
+        "images/bg3.jpg"
     ]
     
     # Select a random background image
@@ -50,16 +51,17 @@ def create_shayari_video(shayari_lines, output_path):
 
     return video_path
 
+# Upload video to Instagram
 def upload_to_instagram(video_path):
     # Login to Instagram using instagrapi
     client = Client()
     client.login("your_username", "your_password")  # Replace with your Instagram credentials
 
-    # Choose a random audio from a predefined list (you can customize the list)
+    # Choose a random audio from a predefined list
     audio_files = [
-        r"C:\\path_to_your_audio\\audio1.mp3",
-        r"C:\\path_to_your_audio\\audio2.mp3",
-        r"C:\\path_to_your_audio\\audio3.mp3"
+        "audio/audio1.mp3",  # Relative path to audio in your project folder
+        "audio/audio2.mp3",
+        "audio/audio3.mp3"
     ]
     selected_audio = random.choice(audio_files)
 
@@ -79,6 +81,7 @@ def upload_to_instagram(video_path):
     # Upload the video with audio to Instagram
     client.video_upload(video_with_audio_path, caption="Shayari for you!")
 
+# Bot that generates and uploads videos every 8 hours
 def run_bot():
     # Example Shayari list
     shayari = [
